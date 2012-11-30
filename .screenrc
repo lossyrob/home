@@ -1,0 +1,9 @@
+startup_message off  
+autodetach on  
+vbell off  
+defutf8 on  
+caption always  
+caption string "%{= wk}%w"  
+
+# Make xterm scrolling work properly with screen.
+termcapinfo xterm-color|xterm|xterms|xs|rxvt ti@:te@
