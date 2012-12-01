@@ -1,0 +1,6 @@
+[submodule ".emacs.d/site-lisp/multiple-cursors"]
+	path = .emacs.d/site-lisp/multiple-cursors
+	url = git://github.com/magnars/multiple-cursors.el.git
+[submodule ".emacs.d/site-lisp/region-bindings-mode"]
+	path = .emacs.d/site-lisp/region-bindings-mode
+	url = git://github.com/fgallina/region-vindings-mode.git
