@@ -41,6 +41,9 @@
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 
+;; Goto line
+(global-set-key (kbd "C-'") 'goto-line)
+
 ;; Use a better buffer switcher
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
