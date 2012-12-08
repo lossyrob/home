@@ -1,6 +1,10 @@
 ;; ensime
 (add-to-list 'load-path "~/.emacs.d/site-lisp/multiple-cursors")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/region-bindings-mode")
+(add-to-list 'load-path "~/.emacs.d/markdown-mode")
+
+(require 'markdown-mode)
+(setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
