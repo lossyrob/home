@@ -77,3 +77,4 @@
 
 ;; Never write "\t" characters
 (setq-default indent-tabs-mode nil)
+(put 'set-goal-column 'disabled nil)
