@@ -106,6 +106,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+## Exports
+
 # Mono
 export XDG_DATA_HOME=$XDG_DATA_HOME:/usr/local/monodevelop-3.0.3.5/share
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/local/monodevelop-3.0.3.5/share
@@ -119,7 +121,6 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export EDITOR=emacs
 export PATH=/home/rob/bin:$PATH
 
-# Fun ctions.
-
-function typedef() { ack "(class|trait|object) $@" ** ;}
-function gitln() { git log --oneline -n $@ ;}
+source ~/.bash/init-git
+source ~/.bash/init-ack
+source ~/.bash/init-screen

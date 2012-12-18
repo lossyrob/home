@@ -1,0 +1,4 @@
+export ACK_PAGER_COLOR="less -x4SRFX" #make ack use colorful less
+
+function ak() { ack "$@" ** ;}
+function typedef() { ack "(class|trait|object) $@" ** ;}
