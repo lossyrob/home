@@ -118,6 +118,10 @@ export JAVA_HOME=/usr/lib/jvm/default-java
 # GDAL
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
+function compviz-restart() {
+    killall -9 compiz & unity & disown;
+}
+
 export EDITOR=emacs
 export PATH=/home/rob/bin:$PATH
 

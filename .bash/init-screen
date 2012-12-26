@@ -3,3 +3,6 @@ function nb() { screen -X screen bash ;}
 
 function emnw() { screen -X screen emacs -nw $@ ;}
 function aknw() { screen -X ak $@ ;}
+
+function sls() { screen -ls ;}
+function skl() { screen -x $@ -X quit ;}
