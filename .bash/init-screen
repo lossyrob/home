@@ -6,3 +6,12 @@ function aknw() { screen -X ak $@ ;}
 
 function sls() { screen -ls ;}
 function skl() { screen -x $@ -X quit ;}
+
+function screen-docs { 
+         cd ~/proj/gt/geotrellis.github.com;
+         screen -S gt-docs -c ~/.screenrc-docs;
+}
+
+function sclean {
+         screen -c ~/.screenrc-clean -S $@;
+}

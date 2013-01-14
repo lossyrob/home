@@ -1,0 +1,14 @@
+startup_message off  
+autodetach on  
+vbell off  
+defutf8 on  
+caption always  
+caption string "%{= wk}%w"  
+
+escape ^]^]
+
+# Make xterm scrolling work properly with screen.
+termcapinfo xterm-color|xterm|xterms|xs|rxvt ti@:te@
+
+screen -t bash 0 bash
+select 0

@@ -124,6 +124,7 @@ function compviz-restart() {
 
 export EDITOR=emacs
 export PATH=/home/rob/bin:$PATH
+export PYTHONSTARTUP=~/.pythonstartup
 
 source ~/.bash/init-git
 source ~/.bash/init-ack
