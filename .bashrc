@@ -85,6 +85,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias lsm='ls -l --block-size=M'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -125,6 +126,14 @@ function compviz-restart() {
 export EDITOR=emacs
 export PATH=/home/rob/bin:$PATH
 export PYTHONSTARTUP=~/.pythonstartup
+
+alias lt='tree -L 1'
+alias ltt='tree -L 2'
+alias lttt='tree -L 3'
+alias ltttt='tree -L 4'
+alias rmem='rm *~'
+alias sbsb='source ~/.bashrc'
+
 
 source ~/.bash/init-git
 source ~/.bash/init-ack
