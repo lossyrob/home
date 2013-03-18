@@ -134,6 +134,8 @@ alias ltttt='tree -L 4'
 alias rmem='rm *~'
 alias sbsb='source ~/.bashrc'
 
+alias ppsql='sudo -u postgres psql'
+
 
 source ~/.bash/init-git
 source ~/.bash/init-ack
