@@ -1,1 +1,6 @@
 function gitln() { git log --oneline -n $@ ;}
+
+function gitresetupstream {
+         git remote update;
+         git reset --hard upstream/master;
+}
