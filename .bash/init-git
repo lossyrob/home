@@ -4,3 +4,7 @@ function gitresetupstream {
          git remote update;
          git reset --hard upstream/master;
 }
+
+function gitrmdeleted {
+         git diff --diff-filter=D --name-only -z | xargs -0 git rm;
+}

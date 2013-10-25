@@ -1,4 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/site-lisp/multiple-cursors")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/region-bindings-mode")
 (add-to-list 'load-path "~/.emacs.d/markdown-mode")
 
@@ -18,11 +17,25 @@
   ;; If there is more than one, they won't work right.
  )
 
+;; Scala Mode 2
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+(unless (package-installed-p 'scala-mode2)
+  (package-refresh-contents) (package-install 'scala-mode2))
+
 ;; make emacs use the clipboard
 (setq x-select-enable-clipboard t)
 
 ;; Allow to delete selection by default
 (delete-selection-mode t)
+
+;; Python Hook
+(add-hook 'python-mode-hook
+          (function (lambda ()
+                      (setq indent-tabs-mode nil
+                            tab-width 2))))
 
 ;; region bindings
 (require 'region-bindings-mode)

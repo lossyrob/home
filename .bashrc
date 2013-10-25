@@ -126,6 +126,7 @@ function compviz-restart() {
 export EDITOR=emacs
 export PATH=/home/rob/bin:$PATH
 export PYTHONSTARTUP=~/.pythonstartup
+export JREBEL_HOME=~/bin/jrebel
 
 alias lt='tree -L 1'
 alias ltt='tree -L 2'
