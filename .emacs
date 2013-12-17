@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/markdown-mode")
+(add-to-list 'load-path "~/.emacs/color-theme.el")
 
 (require 'markdown-mode)
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
@@ -34,6 +35,10 @@
 (package-initialize)
 (unless (package-installed-p 'scala-mode2)
   (package-refresh-contents) (package-install 'scala-mode2))
+
+(package-install 'color-theme)
+(color-theme-initialize)
+(color-theme-ld-dark)
 
 ;; make emacs use the clipboard
 (setq x-select-enable-clipboard t)

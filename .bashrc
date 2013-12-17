@@ -137,8 +137,14 @@ alias sbsb='source ~/.bashrc'
 
 alias ppsql='sudo -u postgres psql'
 
+function replace-recursive() {
+    find . -name "$1" -exec sed -i s/$2/$3/g {} \; ;
+}
+
 
 source ~/.bash/init-git
 source ~/.bash/init-ack
 source ~/.bash/init-screen
 source ~/.bash/init-util
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
