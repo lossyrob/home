@@ -141,3 +141,4 @@ alias ppsql='sudo -u postgres psql'
 source ~/.bash/init-git
 source ~/.bash/init-ack
 source ~/.bash/init-screen
+source ~/.bash/init-util

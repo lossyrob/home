@@ -1,8 +1,18 @@
-(add-to-list 'load-path "~/.emacs.d/site-lisp/region-bindings-mode")
 (add-to-list 'load-path "~/.emacs.d/markdown-mode")
 
 (require 'markdown-mode)
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+(unless (package-installed-p 'scala-mode2)
+  (package-refresh-contents) (package-install 'scala-mode2))
+
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -36,10 +46,6 @@
           (function (lambda ()
                       (setq indent-tabs-mode nil
                             tab-width 2))))
-
-;; region bindings
-(require 'region-bindings-mode)
-(region-bindings-mode-enable)
 
 ;; Make with the curly options
 (setq ido-enable-flex-matching t)
