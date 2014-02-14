@@ -15,3 +15,7 @@ function screen-docs {
 function sclean {
          screen -c ~/.screenrc-clean -S $@;
 }
+
+function scr {
+         screen $@;
+}

@@ -141,6 +141,7 @@ function replace-recursive() {
     find . -name "$1" -exec sed -i s/$2/$3/g {} \; ;
 }
 
+export HADOOP_HOME=/usr/local/hadoop
 
 source ~/.bash/init-git
 source ~/.bash/init-ack
@@ -148,3 +149,11 @@ source ~/.bash/init-screen
 source ~/.bash/init-util
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Fun Facts
+
+echo "FUN FACT:`elinks -dump http://randomfunfacts.com  | sed -n '/^| /p' | tr -d \|`"
+
+function strum() { 
+    play -n synth pl E2 pl A2 pl D3 pl G3 pl B3 pl E4 delay 0 .05 .1 .15 .2 .25 remix - fade 0 4 .1 norm -1;
+}

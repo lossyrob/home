@@ -11,9 +11,5 @@ escape ^]^]
 termcapinfo xterm-color|xterm|xterms|xs|rxvt ti@:te@
 
 screen -t bash 0 bash
-screen -t sbt 1 bash
-screen -t git 2 bash
-screen -t grep 3 bash
-screen -t tree 4 bash
-screen -t scala 5 bash
+screen -t bash 1 bash
 select 0
